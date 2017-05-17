@@ -10,8 +10,7 @@ import org.tensorflow.TensorFlow;
 public class HelloTF {
   public static void main(String[] args) throws Exception {
     try (Graph g = new Graph()) {
-      final String value = "Hello from " + TensorFlow.version();
-
+      final String value = " Hello JPAC from libtensorflow-" + TensorFlow.version();  
       // Construct the computation graph with a single operation, a constant
       // named "MyConst" with a value "value".
       try (Tensor t = Tensor.create(value.getBytes("UTF-8"))) {
